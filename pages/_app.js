@@ -22,7 +22,6 @@ function MyApp({ Component, pageProps }) {
 					content="https://www.telecomsa.com.br/logo-og-image.png"
 				/>
 				<meta property="og:url" content="https://www.telecomsa.com.br/" />
-				<meta property="og:title" content="Tel&Com" />
 				<meta property="og:type" content="website" />
 			</Head>
 			<Header />;

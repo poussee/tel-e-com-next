@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Set core root defaults */
+html {
+	overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+:root {
+	--font-first: 'Titillium Web', sans-serif;
+	--font-second: 'Ubuntu', sans-serif;
+	--cinza: #58595b;
+	--azul-escuro: #085586;
+	--azul-claro: #00a8e9;
+	--laranja: #f29a02;
+	--amarelo: #ffec00;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container--center {
+	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container--right {
+	max-width: 1140px;
+	position: absolute;
+	right: 0px;
+}
+
+.button--amarelo {
+	background: rgb(255, 236, 0);
+	background: linear-gradient(
+		302deg,
+		rgba(255, 236, 0, 1) 0%,
+		rgba(242, 154, 2, 1) 57%
+	);
+	border: none;
+	padding: 8px 40px;
+	border-radius: 20px;
+	font-family: var(--font-first);
+	font-size: 18px;
+	color: #005487;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	font-weight: 700;
+}
+
+.button--azul {
+	background: rgb(0, 168, 233);
+	background: linear-gradient(
+		302deg,
+		rgba(0, 168, 233, 1) 0%,
+		rgba(0, 84, 135, 1) 67%
+	);
+	border: none;
+	padding: 8px 40px;
+	border-radius: 20px;
+	font-family: var(--font-first);
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.button--amarelo:hover,
+.button--azul:hover {
+	animation-name: scale;
+	animation-duration: 700ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+	to {
+		transform: scale(1.1);
+	}
+}
+
+.title--style {
+	font-family: var(--font-first);
+	font-size: 38px;
+	color: var(--azul-escuro);
+	font-weight: 500;
+}
+
+.subtitle--style {
+	font-family: var(--font-first);
+	font-size: 18px;
+	color: var(--azul-claro);
+}
+
+@media (max-width: 800px) {
+	.title--style {
+		font-size: 30px;
+	}
+
+	.subtitle--style {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 420px) {
+	.title--style {
+		font-size: 25px;
+	}
+
+	.subtitle--style {
+		font-size: 12px;
+	}
+}
+
+.animeLeft {
+	opacity: 0;
+	transform: translateX(-20px);
+	animation: animeLeft 0.5s ease-in forwards;
+}
+
+@keyframes animeLeft {
+	to {
+		opacity: 1;
+		transform: initial;
+	}
+}
+
+/* cookies */
+
+.cookies-content > p {
+	margin: 0;
+	max-width: 540px;
+	font-family: var(--font-first);
+}
+
+.cookies-content > p > a {
+	color: #fff;
+}
+
+#cookies-container.cookiesActive {
+	display: none;
+}
+
+.cookies-content {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	background: rgb(0, 168, 233);
+	background: linear-gradient(
+		302deg,
+		rgba(0, 168, 233, 1) 0%,
+		rgba(0, 84, 135, 1) 67%
+	);
+	max-width: 950px;
+	border-radius: 5px;
+	padding: 1rem;
+	margin: 0 auto 3% auto;
+	display: flex;
+	justify-content: space-between;
+	opacity: 0;
+	transform: translateY(1rem);
+	animation: slideUp 0.5s forwards;
+	color: #fff;
+}
+
+.cookies-content span {
+	cursor: pointer;
+}
+
+@keyframes slideUp {
+	to {
+		transform: initial;
+		opacity: initial;
+	}
+}
+
+.cookies-button {
+	font-family: var(--font-first);
+	cursor: pointer;
+	border: none;
+	font-size: 1rem;
+	color: #222;
+	display: inline-block;
+	align-self: center;
+	animation: none !important;
+}
+
+@media (max-width: 685px) {
+	.cookies-content {
+		flex-wrap: wrap;
+		margin: 0 3% 30px 3% !important;
+	}
+
+	.cookies-button {
+		margin-top: 10px;
+		margin: 10px auto;
+		padding: 20px 70px;
+		display: inline-block;
+	}
+
+	.cookies-content > p {
+		max-width: 100%;
+	}
+}
+
+.leaflet-container {
+	width: 100%;
+	height: 100%;
+}
